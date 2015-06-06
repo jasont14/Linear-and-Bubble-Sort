@@ -10,19 +10,25 @@ namespace Sort
     {
         static void Main(string[] args)
         {
-            int[] myNumbers = { 1, 3, 2, 5, 8, 9, 4, 6, 10, 7, 11, 12, 20, 13, 15, 21, 22, 14, 16, 23, 24, 17, 25, 18, 19 };
             CustomSort mySort = new CustomSort();
 
+            int[] InsertionSortList = { 394, 23, 12, 2, 3, 4, 5, 6, 12, 43, 567, 655, 34, 321, 555, 1098, 34, 23, 1, 8, 9, 10 };
+            Console.WriteLine("INSERTION SORT");
+            mySort.InsertionSort(InsertionSortList);
+
+            int[] SelectionSortList = { 394, 23, 12, 2, 3, 4, 5, 6, 12, 43, 567, 655, 34, 321, 555, 1098, 34, 23, 1, 8, 9, 10 };
+            Console.WriteLine("SELECTION SORT");
+            mySort.SelectionSort(SelectionSortList);
+
+            int[] myNumbers = { 394, 23, 12, 2, 3, 4, 5, 6, 12, 43, 567, 655, 34, 321, 555, 1098, 34, 23, 1, 8, 9, 10 };
             Console.WriteLine("LINEAR SORT");
             mySort.LinearSort(myNumbers);
 
-            int[] myNumbers2 = { 1, 3, 2, 5, 8, 9, 4, 6, 10, 7, 11, 12, 20, 13, 15, 21, 22, 14, 16, 23, 24, 17, 25, 18, 19 };
-
+            int[] myNumbers2 = { 394, 23, 12, 2, 3, 4, 5, 6, 12, 43, 567, 655, 34, 321, 555, 1098, 34, 23, 1, 8, 9, 10 };
             Console.WriteLine("\nBUBBLE SORT");
             mySort.BubbleSort(myNumbers2);
 
-            int[] myNumbers3 = { 1, 3, 2, 5, 8, 9, 4, 6, 10, 7, 11, 12, 20, 13, 15, 21, 22, 14, 16, 23, 24, 17, 25, 18, 19 };
-
+            int[] myNumbers3 = { 394, 23, 12, 2, 3, 4, 5, 6, 12, 43, 567, 655, 34, 321, 555, 1098, 34, 23, 1, 8, 9, 10 };
             Console.WriteLine("\nBUBBLE SORT WITH BREAK");
             mySort.BubbleSortWithBreak(myNumbers3);
 

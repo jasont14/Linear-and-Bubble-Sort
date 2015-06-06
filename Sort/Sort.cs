@@ -13,6 +13,67 @@ namespace Sort
 
         }
 
+        public void InsertionSort(int[] myArray)
+        {
+            for (int i = 0; i<myArray.Length; i++)
+            {
+                int j = i;
+                int curMin = myArray[i];
+
+                while(j > 0 && myArray[j-1] > curMin)
+                {
+                    myArray[j] = myArray[j - 1];
+                    j--;
+                }
+
+                myArray[j] = curMin;
+
+                WriteArray(myArray);
+            }
+
+        }
+
+        
+
+        public void SelectionSort(int[] myArray)
+        {
+
+            Console.WriteLine("CURRENT LIST ORDER");
+          
+            //Need to index min position and exchange position for new min
+            int CurMinIndex;
+
+            //create a for loop to run through the list
+            for (int i = 0; i < myArray.Length-1; i++)
+            {
+                //assume you start a min
+                CurMinIndex = i; //Note we are capturing the index position not the value. We will swap if necessary using this position.
+
+                //create a for loop to run through the rest of the list to compare value versus currentMin
+
+                for (int j = i+1; j<myArray.Length; j++)
+                {
+                    if(myArray[j]<myArray[CurMinIndex])
+                    {                      
+                        CurMinIndex = j;
+                    }
+                }
+
+                if (CurMinIndex != i)
+                {
+                    int NewMinValue = myArray[CurMinIndex];
+                    int OldMinValue = myArray[i];
+                    myArray[i] = NewMinValue;
+                    myArray[CurMinIndex] = OldMinValue;
+                }
+
+                WriteArray(myArray);
+            }
+
+            
+        }
+
+
         public void LinearSort(int[] intArray)
         {
             int minValue = 0;
