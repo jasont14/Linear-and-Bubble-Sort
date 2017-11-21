@@ -9,29 +9,41 @@ namespace Sort
     class Program
     {
         static void Main(string[] args)
-        {
+        {            
+            string dash = "*******************\n";
+            int[]SortList = { 1000, 900, 1, 100, 400, 10000, 20000, 5000, 200, 60, 600, 500, 80, 30, 300, 20, 90, 40, 700, 800, 50, 1 };
+
             CustomSort mySort = new CustomSort();
 
-            int[] InsertionSortList = { 394, 23, 12, 2, 3, 4, 5, 6, 12, 43, 567, 655, 34, 321, 555, 1098, 34, 23, 1, 8, 9, 10 };
             Console.WriteLine("INSERTION SORT");
-            mySort.InsertionSort(InsertionSortList);
-
-            int[] SelectionSortList = { 394, 23, 12, 2, 3, 4, 5, 6, 12, 43, 567, 655, 34, 321, 555, 1098, 34, 23, 1, 8, 9, 10 };
-            Console.WriteLine("SELECTION SORT");
+            Console.WriteLine(dash);
+            int[] InsetionSortList = new int[SortList.Length];
+            SortList.CopyTo(InsetionSortList, 0);
+            mySort.InsertionSort(InsetionSortList);
+            
+            Console.WriteLine("\nSELECTION SORT");
+            Console.WriteLine(dash);
+            int[] SelectionSortList = new int[SortList.Length];
+            SortList.CopyTo(SelectionSortList, 0);
             mySort.SelectionSort(SelectionSortList);
-
-            int[] myNumbers = { 394, 23, 12, 2, 3, 4, 5, 6, 12, 43, 567, 655, 34, 321, 555, 1098, 34, 23, 1, 8, 9, 10 };
-            Console.WriteLine("LINEAR SORT");
-            mySort.LinearSort(myNumbers);
-
-            int[] myNumbers2 = { 394, 23, 12, 2, 3, 4, 5, 6, 12, 43, 567, 655, 34, 321, 555, 1098, 34, 23, 1, 8, 9, 10 };
+            
+            Console.WriteLine("\nLINEAR SORT");
+            Console.WriteLine(dash);
+            int[] LinearSort = new int[SortList.Length];
+            SortList.CopyTo(LinearSort, 0);            
+            mySort.LinearSort(LinearSort);
+            
             Console.WriteLine("\nBUBBLE SORT");
-            mySort.BubbleSort(myNumbers2);
-
-            int[] myNumbers3 = { 394, 23, 12, 2, 3, 4, 5, 6, 12, 43, 567, 655, 34, 321, 555, 1098, 34, 23, 1, 8, 9, 10 };
+            Console.WriteLine(dash);
+            int[] BubbleSort = new int[SortList.Length];
+            SortList.CopyTo(BubbleSort, 0);
+            mySort.BubbleSort(BubbleSort);
+            
             Console.WriteLine("\nBUBBLE SORT WITH BREAK");
-            mySort.BubbleSortWithBreak(myNumbers3);
-
+            Console.WriteLine(dash);
+            int[] BubbleSortBreak = new int[SortList.Length];
+            SortList.CopyTo(BubbleSortBreak, 0);
+            mySort.BubbleSortWithBreak(BubbleSortBreak);
             Console.ReadLine();
         }
     }

@@ -13,8 +13,17 @@ namespace Sort
 
         }
 
+        public void WriteSortHeader(int[] myArray)
+        {
+            Console.WriteLine("Starting Array");
+            WriteArray(myArray);
+            Console.WriteLine("Begin");
+        }            
+
         public void InsertionSort(int[] myArray)
         {
+            WriteSortHeader(myArray);
+
             for (int i = 0; i<myArray.Length; i++)
             {
                 int j = i;
@@ -38,8 +47,8 @@ namespace Sort
         public void SelectionSort(int[] myArray)
         {
 
-            Console.WriteLine("CURRENT LIST ORDER");
-          
+            WriteSortHeader(myArray);
+
             //Need to index min position and exchange position for new min
             int CurMinIndex;
 
@@ -76,6 +85,8 @@ namespace Sort
 
         public void LinearSort(int[] intArray)
         {
+            WriteSortHeader(intArray);
+
             int minValue = 0;
             int temp = 0;
 
@@ -109,6 +120,8 @@ namespace Sort
         }
         public void BubbleSort(int[] intArray2)
         {
+            WriteSortHeader(intArray2);
+
             int[] TempArray2 = intArray2;
 
             for (int i = 0; i < intArray2.Length; i++ )
@@ -129,6 +142,8 @@ namespace Sort
 
         public void BubbleSortWithBreak(int[] intArray3)
         {
+            WriteSortHeader(intArray3);
+
             int[] TempArray3 = intArray3;
 
             bool SortHappen;
