@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ *Sorting Algorithms
+ * J. Thatcher
+ * Class, Method, Array, Sorting, Algorithm
+*/
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

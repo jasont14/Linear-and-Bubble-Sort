@@ -128,7 +128,7 @@ namespace Sort
             {
                 WriteArray(TempArray2);
 
-                for (int j = i; j < intArray2.Length-1; j++)
+                for (int j = 0; j < intArray2.Length-1; j++)
                 {
                     if (TempArray2[j] > TempArray2[j+1])
                     {
@@ -164,8 +164,7 @@ namespace Sort
                     }
 
                 } 
-            } while (SortHappen);
-              
+            } while (SortHappen);             
 
         }
 
